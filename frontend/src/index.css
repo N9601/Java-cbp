@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens as RGB channels so Tailwind can apply alpha (bg-primary/10). */
+:root {
+  color-scheme: light;
+  --background: 247 247 248;
+  --card: 255 255 255;
+  --foreground: 15 15 18;
+  --muted: 243 243 245;
+  --muted-foreground: 92 92 102;
+  --subtle: 137 137 147;
+  --border: 228 228 232;
+  --ring: 99 102 241;
+  --primary: 79 70 229;
+  --primary-foreground: 255 255 255;
+  --accent: 238 240 255;
+  --accent-foreground: 55 48 163;
+  --gain: 4 120 87;
+  --gain-soft: 230 247 239;
+  --loss: 190 18 60;
+  --loss-soft: 253 236 240;
+  --warn: 161 98 7;
+  --warn-soft: 254 245 220;
+
+  /* Chart chrome and the validated categorical palette (light steps). */
+  --chart-grid: #ececef;
+  --chart-axis: #8a8a93;
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
+  --series-6: #008300;
+  --series-7: #6250d6;
+  --series-8: #e34948;
+  --series-other: #a3a3ab;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 9 9 11;
+  --card: 19 19 22;
+  --foreground: 240 240 243;
+  --muted: 30 30 35;
+  --muted-foreground: 168 168 178;
+  --subtle: 118 118 128;
+  --border: 39 39 45;
+  --ring: 129 140 248;
+  --primary: 129 140 248;
+  --primary-foreground: 15 15 30;
+  --accent: 30 29 64;
+  --accent-foreground: 199 210 254;
+  --gain: 52 211 153;
+  --gain-soft: 10 46 35;
+  --loss: 251 113 133;
+  --loss-soft: 62 15 27;
+  --warn: 251 191 36;
+  --warn-soft: 56 40 6;
+
+  --chart-grid: #26262c;
+  --chart-axis: #8a8a93;
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --series-5: #d55181;
+  --series-6: #008300;
+  --series-7: #9085e9;
+  --series-8: #e66767;
+  --series-other: #5f5f68;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  ::selection {
+    background: rgb(var(--primary) / 0.22);
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer utilities {
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+}
+
+/* Recharts: keep focus rings off the SVG surface. */
+.recharts-wrapper,
+.recharts-surface {
+  outline: none;
+}

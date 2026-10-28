@@ -1,0 +1,42 @@
+-- 03_sample_stocks.sql : sample listed stocks for the simulated market.
+-- Prices are illustrative starting points only, not real market data.
+
+USE share_market;
+
+INSERT IGNORE INTO stocks (symbol, company_name, sector, current_price)
+VALUES ('RELIANCE', 'Reliance Industries Ltd', 'Energy', 1291.40),
+       ('ONGC', 'Oil & Natural Gas Corporation', 'Energy', 246.85),
+       ('NTPC', 'NTPC Ltd', 'Energy', 344.10),
+       ('POWERGRID', 'Power Grid Corporation of India', 'Energy', 301.55),
+       ('COALINDIA', 'Coal India Ltd', 'Energy', 389.70),
+       ('TCS', 'Tata Consultancy Services', 'Information Technology', 3418.25),
+       ('INFY', 'Infosys Ltd', 'Information Technology', 1521.60),
+       ('HCLTECH', 'HCL Technologies Ltd', 'Information Technology', 1619.30),
+       ('WIPRO', 'Wipro Ltd', 'Information Technology', 264.95),
+       ('TECHM', 'Tech Mahindra Ltd', 'Information Technology', 1558.75),
+       ('HDFCBANK', 'HDFC Bank Ltd', 'Banking', 1718.90),
+       ('ICICIBANK', 'ICICI Bank Ltd', 'Banking', 1249.15),
+       ('SBIN', 'State Bank of India', 'Banking', 811.45),
+       ('KOTAKBANK', 'Kotak Mahindra Bank Ltd', 'Banking', 1781.20),
+       ('AXISBANK', 'Axis Bank Ltd', 'Banking', 1108.60),
+       ('BAJFINANCE', 'Bajaj Finance Ltd', 'Financial Services', 7046.35),
+       ('BHARTIARTL', 'Bharti Airtel Ltd', 'Telecom', 1642.80),
+       ('ITC', 'ITC Ltd', 'FMCG', 431.25),
+       ('HINDUNILVR', 'Hindustan Unilever Ltd', 'FMCG', 2381.40),
+       ('NESTLEIND', 'Nestle India Ltd', 'FMCG', 2248.65),
+       ('LT', 'Larsen & Toubro Ltd', 'Infrastructure', 3552.10),
+       ('ADANIENT', 'Adani Enterprises Ltd', 'Infrastructure', 2448.30),
+       ('MARUTI', 'Maruti Suzuki India Ltd', 'Automobile', 12297.50),
+       ('TATAMOTORS', 'Tata Motors Ltd', 'Automobile', 719.85),
+       ('BAJAJ-AUTO', 'Bajaj Auto Ltd', 'Automobile', 8894.20),
+       ('SUNPHARMA', 'Sun Pharmaceutical Industries', 'Pharma', 1722.45),
+       ('DRREDDY', 'Dr. Reddy''s Laboratories', 'Pharma', 1251.30),
+       ('CIPLA', 'Cipla Ltd', 'Pharma', 1479.90),
+       ('ASIANPAINT', 'Asian Paints Ltd', 'Consumer', 2419.55),
+       ('TITAN', 'Titan Company Ltd', 'Consumer', 3381.70),
+       ('DMART', 'Avenue Supermarts Ltd', 'Consumer', 3902.15),
+       ('ULTRACEMCO', 'UltraTech Cement Ltd', 'Materials', 11498.40),
+       ('PIDILITIND', 'Pidilite Industries Ltd', 'Materials', 2951.05),
+       ('TATASTEEL', 'Tata Steel Ltd', 'Metals', 152.35),
+       ('JSWSTEEL', 'JSW Steel Ltd', 'Metals', 1009.80),
+       ('HINDALCO', 'Hindalco Industries Ltd', 'Metals', 641.25);

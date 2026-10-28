@@ -1,0 +1,19 @@
+# Secrets: the real database password lives here (see db.properties.example)
+backend/db.properties
+
+# Build output
+backend/target/
+backend/src/main/resources/static/
+frontend/dist/
+frontend/node_modules/
+
+# Private development MySQL created by scripts/start-local-mysql.cmd
+.localdb/
+
+# Editors and OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
